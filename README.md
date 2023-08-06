@@ -1,16 +1,4 @@
-# myapp
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+the 3 new features that i have added are
+1. Splash screen: before starting the app we see a screen for 5 seconds
+2. loading screen: after sign in or register we see a loading screen
+3. It shows total income expenses and savings by calculating them from the lists of different categories of incomes and expenses and update data to backend
