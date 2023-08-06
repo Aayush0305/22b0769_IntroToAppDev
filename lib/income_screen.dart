@@ -1,12 +1,20 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/loading_screen.dart';
 import 'Category_class.dart';
+import 'package:provider/provider.dart';
+import 'DatabaseServices.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'home_screen.dart';
+import 'loading_screen.dart';
 class Incomes{
   String name="";
   double amount=0;
 }
 class Income extends StatefulWidget {
   Icategory ic;
-  Income(this.ic);
+  List<Icategory> icatl=[];
+  Income(this.ic,this.icatl);
 
   @override
   State<Income> createState() => _IncomeState();
@@ -15,7 +23,9 @@ class Income extends StatefulWidget {
 class _IncomeState extends State<Income> {
   @override
   Widget build(BuildContext context) {
-    var inc=widget.ic;
+    final user=Provider.of<User?>(context);
+    final userdata=Provider.of<DocumentSnapshot?>(context);
+    Icategory inc=widget.ic;
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(
@@ -41,6 +51,7 @@ class _IncomeState extends State<Income> {
                   icon: Icon(Icons.delete),
                   onPressed: (){
                     setState(() {
+                      inc.amount=inc.amount-inc.exlist[i].amount;
                       inc.exlist.removeAt(i);
                     });
                   },
@@ -91,6 +102,7 @@ class _IncomeState extends State<Income> {
                         setState(() {
                           inc.amount= inc.amount +newexp.amount;
                           inc.exlist.add(newexp);
+
                         });
                         Navigator.pop(context);
                       } ),

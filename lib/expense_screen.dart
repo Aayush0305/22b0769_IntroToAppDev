@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'Category_class.dart';
+import 'package:provider/provider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'DatabaseServices.dart';
 class ExCategory extends StatefulWidget {
   Ecategory ct;
   ExCategory(this.ct);
@@ -11,6 +15,8 @@ class ExCategory extends StatefulWidget {
 class _ExCategoryState extends State<ExCategory> {
   @override
   Widget build(BuildContext context) {
+    final user=Provider.of<User?>(context);
+    final userdata=Provider.of<DocumentSnapshot?>(context);
     var c=widget.ct;
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent[100],
@@ -39,6 +45,7 @@ class _ExCategoryState extends State<ExCategory> {
                 setState(() {
                   c.amount=c.amount-c.exlist[i].amount;
                   c.exlist.removeAt(i);
+                 // DatabaseServices(uid:user!.uid).updateEData(widget.ecatl);
                 });
                },
              ),
@@ -88,6 +95,7 @@ class _ExCategoryState extends State<ExCategory> {
                         setState(() {
                           c.amount= c.amount +newexp.amount;
                           c.exlist.add(newexp);
+                         // DatabaseServices(uid:user!.uid).updateEData(widget.ecatl);
                         });
                         Navigator.pop(context);
                       } ),

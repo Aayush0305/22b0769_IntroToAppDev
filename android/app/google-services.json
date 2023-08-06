@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "637854833652",
-    "project_id": "budget-tracker-app-b32fe",
-    "storage_bucket": "budget-tracker-app-b32fe.appspot.com"
+    "project_number": "473755076138",
+    "project_id": "mybudgettracker-4d6ec",
+    "storage_bucket": "mybudgettracker-4d6ec.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:637854833652:android:ff16be15672682a54d37a1",
+        "mobilesdk_app_id": "1:473755076138:android:544c5900d40d00df15a553",
         "android_client_info": {
           "package_name": "com.example.myapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "637854833652-dciip8rseaj6ecrcu95o5ba21fnr3n3r.apps.googleusercontent.com",
+          "client_id": "473755076138-fcg2mkuldphpv9tdldhcvseqv1npshvd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDtZQUbIAJIZTyRnBQwJE69d1pgyV6ZFHg"
+          "current_key": "AIzaSyAekYK_n5HKvJrV5uiIw1qi4Ubt-y8z5TA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "637854833652-dciip8rseaj6ecrcu95o5ba21fnr3n3r.apps.googleusercontent.com",
+              "client_id": "473755076138-fcg2mkuldphpv9tdldhcvseqv1npshvd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
